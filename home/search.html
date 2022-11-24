@@ -1,0 +1,155 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>商品列表</title>
+
+	<link href="https://cdn.bootcss.com/amazeui/2.5.1/css/amazeui.css" rel="stylesheet" type="text/css" />
+	<link href="../AmazeUI-2.4.2/assets/css/admin.css" rel="stylesheet" type="text/css" />
+
+	<link href="../basic/css/demo.css" rel="stylesheet" type="text/css" />
+
+	<link href="../css/seastyle.css" rel="stylesheet" type="text/css" />
+
+	<script src="https://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+	<script type="text/javascript" src="../js/script.js"></script>
+	<script type="text/javascript" src="../js/search.js"></script>
+	<script src="../js/tools.js"></script>
+	<script src="../js/template-web.js"></script>
+</head>
+
+<body>
+
+	<!--顶部导航条 -->
+	<div class="header-top">
+		<div class="am-container header">
+			<ul class="message-l">
+				<div class="topMessage">
+					<div class="menu-hd">
+						<a href="login.html" target="_top" class="h">亲，请登录</a>
+						<a href="registe.html" target="_top" class="vv" style="margin-left: 30px;">免费注册</a>
+					</div>
+				</div>
+			</ul>
+			<ul class="message-r">
+				<div class="topMessage my-shangcheng">
+					<div class="menu-hd MyShangcheng"><a id="personzx" target="_top"
+							style="cursor: pointer;">个人中心</a></div>
+				</div>
+				<div class="topMessage mini-cart">
+					<div class="menu-hd" id="carbtn"><a id="mc-menu-hd" target="_top"><span>购物车</span><strong id="J_MiniCartNum" class="h"></strong></a></div>
+				</div>
+
+			</ul>
+		</div>
+	</div>
+
+	<!--悬浮搜索框-->
+
+	<div class="nav white">
+		<div class="logo"><img src="../images/logo.png" /></div>
+		<div class="logoBig">
+			<li><img src="../images/logobig.png" /></li>
+		</div>
+
+		<div class="search-bar pr">
+			<a name="index_none_header_sysc" href="#"></a>
+			<form>
+				<input id="searchInput" name="index_none_header_sysc" type="text" placeholder="搜索" autocomplete="off">
+				<input id="ai-topsearch" class="submit am-btn" value="搜索" index="1" type="submit">
+			</form>
+		</div>
+	</div>
+
+	<div class="clear"></div>
+	<b class="line"></b>
+	<div class="search">
+		<div class="search-list">
+			<div class="nav-table">
+				<div class="long-title"><span class="all-goods">商品列表</span></div>
+
+			</div>
+
+
+			<div class="am-g am-g-fixed">
+				<div class="am-u-sm-12 am-u-md-12">
+					<div class="theme-popover">
+						<ul class="select">
+							<div class="clear"></div>
+							<li class="select-result">
+								<dl>
+									<dt>已选</dt>
+									<dd class="select-no"></dd>
+									<p class="eliminateCriteria">清除</p>
+								</dl>
+							</li>
+							<div class="clear"></div>
+							<li class="select-list">
+								<dl id="select1"></dl>
+							</li>
+							<li class="select-list">
+								<dl id="select2"></dl>
+							</li>
+							<li class="select-list">
+								<dl id="select3"></dl>
+							</li>
+
+						</ul>
+						<div class="clear"></div>
+					</div>
+					<div class="search-content">
+						<div class="sort">
+							<li class="big"></li>
+						</div>
+						<div class="clear"></div>
+
+						<ul id="ullist" class="am-avg-sm-2 am-avg-md-3 am-avg-lg-4 boxes">
+						</ul>
+					</div>
+
+					<div class="clear"></div>
+					<!--分页 -->
+					<ul class="am-pagination am-pagination-right">
+						<li class="am-disabled"><a href="#">&laquo;</a></li>
+						<li class="am-active"><a href="#">1</a></li>
+						<li><a href="#">&raquo;</a></li>
+					</ul>
+
+				</div>
+			</div>
+			<div class="footer">
+			</div>
+		</div>
+
+	</div>
+
+
+
+	<!--菜单 -->
+	<div class=tip>
+		<div id="sidebar">
+
+			<div class="quick_toggle">
+				<li class="qtitem">
+					<a href="#top" class="return_top"><span class="top"></span></a>
+				</li>
+			</div>
+			<!--回到顶部 -->
+			<div id="quick_links_pop" class="quick_links_pop hide"></div>
+		</div>
+	</div>
+	<script>
+		window.jQuery || document.write('<script src="basic/js/jquery-1.9.min.js"><\/script>');
+	</script>
+	<script type="text/javascript" src="../basic/js/quick_links.js"></script>
+
+
+
+</body>
+
+</html>

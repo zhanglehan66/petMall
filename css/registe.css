@@ -1,0 +1,86 @@
+@import "reset.css";
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  filter: blur(8px);
+  background: url("../images/back2.jpg");
+  z-index: -1;
+  background-size: cover;
+}
+.registe_content {
+  height: 500px;
+  margin: 80px auto;
+  width: 450px;
+  border: 1px solid #fff;
+  background-color: #ebe9e8a4;
+  padding-left: 50px;
+  box-sizing: border-box;
+}
+.registe_content h2 {
+  line-height: 60px;
+  font-size: 30px;
+  color: #ff6600;
+  font-weight: bolder;
+  -webkit-text-stroke: 1px #fff;
+}
+.registe_content .item {
+  width: 400px;
+  margin-bottom: 30px;
+  margin-top: 10px;
+  height: 30px;
+}
+.registe_content .item span {
+  display: inline-block;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  margin-left: 5px;
+  color: red;
+}
+.registe_content i {
+  border: 1px solid #999;
+  font-size: 24px;
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  border-right: none;
+  vertical-align: -5px;
+  color: #999;
+  text-align: center;
+  line-height: 30px;
+  background-color: #fff;
+}
+.registe_content .inp {
+  width: 270px;
+  height: 30px;
+  border: 1px solid #999;
+  text-indent: 1em;
+  color: #999;
+  background-color: #fff;
+}
+.registe_content .registe_btn {
+  width: 300px;
+  height: 40px;
+  background-color: #ff6600;
+  color: white;
+  font-size: 18px;
+  border-radius: 8px;
+}
+.registe_content .i3 {
+  font-size: 14px;
+  color: #fff;
+}
+.registe_content .i3 input {
+  vertical-align: -1px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+.registe_content .i3 a {
+  font-size: 14px;
+  color: #fff;
+  margin-left: 100px;
+}

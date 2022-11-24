@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=0">
+
+	<title>订单管理</title>
+
+	<link href="../AmazeUI-2.4.2/assets/css/admin.css" rel="stylesheet" type="text/css">
+	<link href="https://cdn.bootcss.com/amazeui/2.5.1/css/amazeui.css" rel="stylesheet" type="text/css" />
+
+	<link href="../css/personal.css" rel="stylesheet" type="text/css">
+	<link href="../css/orstyle.css" rel="stylesheet" type="text/css">
+
+	<script src="https://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+	<script src="https://cdn.bootcss.com/amazeui/2.5.1/js/amazeui.min.js"></script>
+	<script src="../js/order.js"></script>
+	<script src="../js/tools.js"></script>
+	<script src="../js/template-web.js"></script>
+
+</head>
+
+<body>
+	<!--头 -->
+	<header>
+		<article>
+			<div class="mt-logo">
+				<!--悬浮搜索框--> 
+				<div class="nav white">
+					<div class="logoBig">
+						<li><a href="../home/home.html"><img src="../images/logobig.png" /></a></li>
+					</div>
+
+					<div class="search-bar pr">
+						<a name="index_none_header_sysc" href="#"></a>
+						<form>
+							<input id="searchInput" name="index_none_header_sysc" type="text" placeholder="搜索"
+								autocomplete="off">
+							<input id="ai-topsearch" class="submit am-btn" value="搜索" index="1" type="submit">
+						</form>
+					</div>
+				</div>
+
+				<div class="clear"></div>
+			</div>
+		</article>
+	</header>
+	<div class="nav-table">
+		<div class="nav-table">
+			<div class="long-title"><a href="./index.html" style="color: white;font-size: 18px;">个人中心</a></div>
+			<div class="nav-cont">
+				<ul>
+					<li class="index"><a href="./information.html">个人信息</a></li>
+					<li class="qc"><a href="./address.html">收货地址</a></li>
+					<li class="qc"><a href="./order.html">我的订单</a></li>
+				</ul>
+
+			</div>
+		</div>
+	</div>
+	<b class="line"></b>
+	<div class="center">
+		<div class="col-main">
+
+			<div class="user-order">
+
+				<!--标题 -->
+				<div class="am-cf am-padding">
+					<div class="am-fl am-cf"><strong class="am-text-danger am-text-lg">订单管理</strong> /
+						<small>Order</small>
+					</div>
+				</div>
+				<hr />
+
+				<div class="am-tabs am-tabs-d2 am-margin" data-am-tabs>
+
+					<ul class="am-avg-sm-5 am-tabs-nav am-nav am-nav-tabs">
+						<li class="am-active"><a href="#tab1">所有订单</a></li>
+					</ul>
+
+					<div class="am-tabs-bd">
+						<div class="am-tab-panel am-fade am-in am-active" id="tab1">
+							<div class="order-top">
+								<div class="th th-item">
+									<td class="td-inner">商品</td>
+								</div>
+								<div class="th th-price">
+									<td class="td-inner">单价</td>
+								</div>
+								<div class="th th-number">
+									<td class="td-inner">数量</td>
+								</div>
+								<div class="th th-operation">
+									<td class="td-inner">商品操作</td>
+								</div>
+								<div class="th th-amount">
+									<td class="td-inner">合计</td>
+								</div>
+								<div class="th th-status">
+									<td class="td-inner">交易状态</td>
+								</div>
+								<div class="th th-change">
+									<td class="td-inner">交易操作</td>
+								</div>
+							</div>
+
+							<div class="order-main">
+								<div class="order-list"></div>
+
+							</div>
+
+						</div>
+						
+					</div>
+
+				</div>
+			</div>
+			<!--底部-->
+			<div class="footer">
+				<div class="footer-hd"></div>
+				<div class="footer-bd"></div>
+
+			</div>
+		</div>
+	</div>
+
+</body>
+
+</html>

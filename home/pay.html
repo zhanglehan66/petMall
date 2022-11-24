@@ -1,0 +1,264 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0 ,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>结算页面</title>
+
+	<link href="https://cdn.bootcss.com/amazeui/2.5.1/css/amazeui.css" rel="stylesheet" type="text/css" />
+
+	<link href="../basic/css/demo.css" rel="stylesheet" type="text/css" />
+	<link href="../css/cartstyle.css" rel="stylesheet" type="text/css" />
+
+	<link href="../css/jsstyle.css" rel="stylesheet" type="text/css" />
+
+	<script src="https://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+	<script type="text/javascript" src="../js/address.js"></script>
+	<script src="https://cdn.bootcss.com/amazeui/2.5.1/js/amazeui.min.js"></script>
+	<script src="../js/pay.js"></script>
+	<script src="../js/tools.js"></script>
+	<script src="../js/template-web.js"></script>
+
+</head>
+
+<body>
+
+	<!--顶部导航条 -->
+	<div class="header-top">
+		<div class="header-top">
+			<div class="am-container header">
+				<ul class="message-l">
+					<div class="topMessage">
+						<div class="menu-hd">
+							<a href="login.html" target="_top" class="h">亲，请登录</a>
+							<a href="registe.html" target="_top" class="vv" style="margin-left: 30px;">免费注册</a>
+						</div>
+					</div>
+				</ul>
+				<ul class="message-r">
+					<div class="topMessage my-shangcheng">
+						<div class="menu-hd MyShangcheng"><a id="personzx" target="_top"
+								style="cursor: pointer;">个人中心</a></div>
+					</div>
+					<div class="topMessage mini-cart">
+						<div class="menu-hd" id="carbtn"><a id="mc-menu-hd" target="_top"><span>购物车</span><strong id="J_MiniCartNum" class="h"></strong></a></div>
+					</div>
+
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<!--悬浮搜索框-->
+
+	<div class="nav white">
+		<div class="logo"><img src="../images/logo.png" /></div>
+		<div class="logoBig">
+			<li><img src="../images/logobig.png" /></li>
+		</div>
+
+		<div class="search-bar pr">
+			<a name="index_none_header_sysc" href="#"></a>
+			<form>
+				<input id="searchInput" name="index_none_header_sysc" type="text" placeholder="搜索" autocomplete="off">
+				<input id="ai-topsearch" class="submit am-btn" value="搜索" index="1" type="submit">
+			</form>
+		</div>
+	</div>
+
+	<div class="clear"></div>
+	<div class="concent">
+		<!--地址 -->
+		<div class="paycont">
+			<div class="address">
+
+				<div class="clear"></div>
+				<ul id="adressul">
+					<!-- <div class="per-border"></div> -->
+					<li class="user-addresslist defaultAddr">
+
+						<div class="address-left">
+							<div class="user DefaultAddr">
+
+								<span class="buy-address-detail">
+									<span class="buy-user">艾迪 </span>
+									<span class="buy-phone">15871145629</span>
+								</span>
+							</div>
+							<div class="default-address DefaultAddr">
+								<span class="buy-line-title buy-line-title-type">收货地址：</span>
+								<span class="buy--address-detail">
+									<span class="province">湖北</span>省
+									<span class="city">武汉</span>市
+									<span class="dist">洪山</span>区
+									<span class="street">雄楚大道666号(中南财经政法大学)</span>
+								</span>
+
+								</span>
+							</div>
+							<ins class="deftip">默认地址</ins>
+						</div>
+						<div class="address-right">
+							<a href="../person/address.html">
+								<span class="am-icon-angle-right am-icon-lg"></span></a>
+						</div>
+						<div class="clear"></div>
+
+						<div class="new-addr-btn">
+							<a href="#" class="hidden">设为默认</a>
+							<span class="new-addr-bar hidden">|</span>
+							<a href="#">编辑</a>
+							<span class="new-addr-bar">|</span>
+							<a href="javascript:void(0);" onclick="delClick(this);">删除</a>
+						</div>
+
+					</li>
+					<div class="per-border"></div>
+					
+
+				</ul>
+
+				<div class="clear"></div>
+			</div>
+
+
+
+			<!--订单 -->
+			<div class="concent">
+				<div id="payTable">
+					<h3>确认订单信息</h3>
+					<div class="cart-table-th">
+						<div class="wp">
+
+							<div class="th th-item">
+								<div class="td-inner">商品信息</div>
+							</div>
+							<div class="th th-price">
+								<div class="td-inner">单价</div>
+							</div>
+							<div class="th th-amount">
+								<div class="td-inner">数量</div>
+							</div>
+							<div class="th th-sum">
+								<div class="td-inner">金额</div>
+							</div>
+							<div class="th th-oplist">
+								<div class="td-inner">配送方式</div>
+							</div>
+
+						</div>
+					</div>
+					<div class="clear"></div>
+
+					<tr class="item-list">
+						<div class="bundle  bundle-last">
+
+							<div class="bundle-main">
+								<ul class="item-content clearfix">
+									<div class="pay-phone">
+										
+									</div>
+									<li class="td td-amount">
+										<div class="amount-wrapper ">
+											<div class="item-amount ">
+												<span class="phone-title">购买数量</span>
+												<div class="sl">
+													<input id="min" class="am-btn" type="button" value="-" />
+													<input id="text_box" class="text_box" name="" type="text" value="3"
+														style="width:30px;display: inline-block;height: 30px;text-align: center;line-height: 30px;" />
+													<input id="add" class="am-btn" type="button" value="+" />
+												</div>
+											</div>
+										</div>
+									</li>
+									<li class="td td-sum">
+										<div class="td-inner">
+											<em tabindex="0" class="J_ItemSum number" id="money">117.00</em>
+										</div>
+									</li>
+									<li class="td td-oplist">
+										<div class="td-inner">
+											<span class="phone-title">配送方式</span>
+											<div class="pay-logis">
+												快递<b class="sys_item_freprice">10</b>元
+											</div>
+										</div>
+									</li>
+
+								</ul>
+								<div class="clear"></div>
+
+							</div>
+					</tr>
+					<div class="clear"></div>
+				</div>
+
+				
+			</div>
+			<div class="clear"></div>
+			
+			</div>
+			<!--含运费小计 -->
+			<div class="buy-point-discharge ">
+				<p class="price g_price ">
+					合计（含运费） <span>¥</span><em class="pay-sum" id="paysum">244.00</em>
+				</p>
+			</div>
+
+			<!--信息 -->
+			<div class="order-go clearfix">
+				<div class="pay-confirm clearfix">
+					<div class="box">
+						<div tabindex="0" id="holyshit267" class="realPay"><em class="t">实付款：</em>
+							<span class="price g_price ">
+								<span>¥</span> <em class="style-large-bold-red " id="J_ActualFee">244.00</em>
+							</span>
+						</div>
+
+						<div id="holyshit268" class="pay-address">
+
+							
+						</div>
+					</div>
+
+					<div id="holyshit269" class="submitOrder">
+						<div class="go-btn-wrap">
+							<a id="J_Go" class="btn-go" tabindex="0" title="点击此按钮，提交订单">提交订单</a>
+						</div>
+					</div>
+					<div class="clear"></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="clear"></div>
+	</div>
+	</div>
+	<div class="footer">
+		<div class="footer-hd">
+			
+		</div>
+	</div>
+	</div>
+	<div class="theme-popover-mask"></div>
+	<div class="theme-popover">
+
+		<!--标题 -->
+		<div class="am-cf am-padding">
+			<div class="am-fl am-cf"><strong class="am-text-danger am-text-lg">新增地址</strong> / <small>Add
+					address</small></div>
+		</div>
+		<hr />
+
+		
+
+	</div>
+
+	<div class="clear"></div>
+</body>
+
+</html>

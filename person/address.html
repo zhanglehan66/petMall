@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=0">
+
+	<title>地址管理</title>
+
+	<link href="../AmazeUI-2.4.2/assets/css/admin.css" rel="stylesheet" type="text/css">
+	<link href="https://cdn.bootcss.com/amazeui/2.5.1/css/amazeui.css" rel="stylesheet" type="text/css" />
+
+	<link href="../css/personal.css" rel="stylesheet" type="text/css">
+	<link href="../css/addstyle.css" rel="stylesheet" type="text/css">
+	<script src="https://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+	<script src="https://cdn.bootcss.com/amazeui/2.5.1/js/amazeui.min.js"></script>
+	<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://cdn.bootcss.com/distpicker/2.0.3/distpicker.js"></script>
+	<script src="../js/address.js"></script>
+	<script src="../js/tools.js"></script>
+	<script src="../js/template-web.js"></script>
+
+</head>
+
+<body>
+	<!--头 -->
+	<header>
+		<article>
+			<div class="mt-logo">
+
+				<!--悬浮搜索框-->
+
+				<div class="nav white">
+					<div class="logoBig">
+						<li><img src="../images/logobig.png" /></li>
+					</div>
+
+					<div class="search-bar pr">
+						<a name="index_none_header_sysc" href="#"></a>
+						<form>
+							<input id="searchInput" name="index_none_header_sysc" type="text" placeholder="搜索"
+								autocomplete="off">
+							<input id="ai-topsearch" class="submit am-btn" value="搜索" index="1" type="submit">
+						</form>
+					</div>
+				</div>
+
+				<div class="clear"></div>
+			</div>
+		</article>
+	</header>
+
+	<div class="nav-table">
+		<div class="nav-table">
+			<div class="long-title"><a href="./index.html" style="color: white;font-size: 18px;">个人中心</a></div>
+			<div class="nav-cont">
+				<ul>
+					<li class="index"><a href="./information.html">个人信息</a></li>
+					<li class="qc"><a href="./address.html">收货地址</a></li>
+					<li class="qc"><a href="./order.html">我的订单</a></li>
+				</ul>
+
+			</div>
+		</div>
+	</div>
+	<b class="line"></b>
+
+	<div class="center">
+		<div class="col-main">
+
+			<div class="user-address">
+				<!--标题 -->
+				<div class="am-cf am-padding">
+					<div class="am-fl am-cf"><strong class="am-text-danger am-text-lg">地址管理</strong> /
+						<small>Address&nbsp;list</small>
+					</div>
+				</div>
+				<hr />
+				<ul id="addressul" class="am-avg-sm-1 am-avg-md-3 am-thumbnails">
+				</ul>
+				<div class="clear"></div>
+				<a class="new-abtn-type" data-am-modal="{target: '#doc-modal-1', closeViaDimmer: 0}">添加新地址</a>
+				<!--例子-->
+				<div class="am-modal am-modal-no-btn" id="doc-modal-1">
+
+					<div class="add-dress au">
+						<!--标题 -->
+						<div class="am-cf am-padding">
+							<div class="am-fl am-cf"><strong class="am-text-danger am-text-lg">新增地址</strong> /
+								<small>Add&nbsp;address</small>
+							</div>
+						</div>
+						<hr/>
+						<div class="am-u-md-12 am-u-lg-8" style="margin-top: 20px;">
+							<form class="am-form am-form-horizontal">
+								<div class="am-form-group">
+									<label for="user-name" class="am-form-label">收货人</label>
+									<div class="am-form-content">
+										<input type="text" id="user-name" placeholder="收货人">
+									</div>
+								</div>
+								<div class="am-form-group">
+									<label for="user-phone" class="am-form-label">手机号码</label>
+									<div class="am-form-content">
+										<input id="user-phone" placeholder="手机号必填" type="tel">
+									</div>
+								</div>
+								<div class="am-form-group">
+									<label for="user-address" class="am-form-label">所在地</label>
+
+									<div data-toggle="distpicker" class="distpick" id="distpick">
+										<!-- container -->
+										<select class="selc" data-province="浙江省"></select><!-- 省 -->
+										<select class="selc" data-city="杭州市"></select><!-- 市 -->
+										<select class="selc" data-district="西湖区"></select><!-- 区 -->
+									</div>
+								</div>
+								<div class="am-form-group">
+									<label for="user-intro" class="am-form-label">详细地址</label>
+									<div class="am-form-content">
+										<textarea class="" rows="3" id="user-intro" placeholder="输入详细地址"></textarea>
+										<small>100字以内写出你的详细地址...</small>
+									</div>
+								</div>
+								<div class="am-form-group">
+									<div class="am-u-sm-9 am-u-sm-push-3">
+										<a class="am-btn am-btn-danger" id="addbtn">保存</a>
+										<a href="javascript: void(0)" class="am-close am-btn am-btn-danger"
+											data-am-modal-close>取消</a>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+
+					<div class="update-dress au">
+						<!--标题 -->
+						<div class="am-cf am-padding">
+							<div class="am-fl am-cf"><strong class="am-text-danger am-text-lg">编辑地址</strong> /
+								<small>Update&nbsp;address</small>
+							</div>
+						</div>
+						<hr/>
+						<div class="am-u-md-12 am-u-lg-8" style="margin-top: 20px;">
+							<form class="am-form am-form-horizontal">
+								<div class="am-form-group">
+									<label class="am-form-label">收货人</label>
+									<div class="am-form-content">
+										<input type="text" id="upname" placeholder="收货人">
+									</div>
+								</div>
+								<div class="am-form-group">
+									<label for="user-phone" class="am-form-label">手机号码</label>
+									<div class="am-form-content">
+										<input id="upphone" placeholder="手机号必填" type="email">
+									</div>
+								</div>
+								<div class="am-form-group">
+									<label for="user-address" class="am-form-label">所在地</label>
+
+									<div data-toggle="distpicker" class="distpick" id="updistpick">
+										<!-- container -->
+										<select class="selc"></select><!-- 省 -->
+										<select class="selc"></select><!-- 市 -->
+										<select class="selc"></select><!-- 区 -->
+									</div>
+								</div>
+								<div class="am-form-group">
+									<label for="user-intro" class="am-form-label">详细地址</label>
+									<div class="am-form-content">
+										<textarea class="" rows="3" id="upintro" placeholder="输入详细地址"></textarea>
+										<small>100字以内写出你的详细地址...</small>
+									</div>
+								</div>
+								<div class="am-form-group">
+									<div class="am-u-sm-9 am-u-sm-push-3">
+										<a class="am-btn am-btn-danger" id="upbtn">保存</a>
+										<a href="javascript: void(0)" class="am-close am-btn am-btn-danger"
+											data-am-modal-close>取消</a>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+
+				
+
+				<script type="text/javascript">
+					$(document).ready(function () {
+						$(".new-option-r").click(function () {
+							$(this).parent('.user-addresslist').addClass("defaultAddr").siblings().removeClass("defaultAddr");
+						});
+
+						var $ww = $(window).width();
+						if ($ww > 640) {
+							$("#doc-modal-1").removeClass("am-modal am-modal-no-btn")
+						}
+
+					})
+				</script>
+
+				<div class="clear"></div>
+
+			</div>
+			<div class="footer">
+				<div class="footer-hd">
+
+				</div>
+			</div>
+
+
+		</div>
+
+</body>
+
+</html>

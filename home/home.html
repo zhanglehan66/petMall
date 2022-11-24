@@ -1,0 +1,861 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>爱宠商城</title>
+
+	<link href="https://cdn.bootcss.com/amazeui/2.5.1/css/amazeui.css" rel="stylesheet" type="text/css" />
+	<link href="../AmazeUI-2.4.2/assets/css/admin.css" rel="stylesheet" type="text/css" />
+
+	<link href="../basic/css/demo.css" rel="stylesheet" type="text/css" />
+
+	<link href="../css/hmstyle.css" rel="stylesheet" type="text/css" />
+	<script src="https://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+	<script src="https://cdn.bootcss.com/amazeui/2.5.1/js/amazeui.min.js"></script>
+	<script src="../js/home.js"></script>
+	<script src="../js/tools.js"></script>
+	<script src="../js/template-web.js"></script>
+
+</head>
+
+<body>
+	<div class="hmtop">
+		<!--顶部导航条 -->
+		<div class="header-top">
+			<div class="am-container header">
+				<ul class="message-l">
+					<div class="topMessage">
+						<div class="menu-hd">
+							<a href="login.html" target="_top" class="h">亲，请登录</a>
+							<a href="registe.html" target="_top" class="vv" style="margin-left: 30px;">免费注册</a>
+						</div>
+					</div>
+				</ul>
+				<ul class="message-r">
+					<div class="topMessage my-shangcheng">
+						<div class="menu-hd MyShangcheng"><a id="personzx" target="_top"
+								style="cursor: pointer;">个人中心</a></div>
+					</div>
+					<div class="topMessage mini-cart">
+						<div class="menu-hd" id="carbtn"><a id="mc-menu-hd" target="_top"><span>购物车</span><strong id="J_MiniCartNum" class="h"></strong></a></div>
+					</div>
+
+				</ul>
+			</div>
+		</div>
+
+		<!--悬浮搜索框-->
+
+		<div class="nav white">
+			<div class="logo"><img src="../images/logo.png" /></div>
+			<div class="logoBig">
+				<li><img src="../images/logobig.png" /></li>
+			</div>
+
+
+			<div class="search-bar pr">
+				<a name="index_none_header_sysc" href="#"></a>
+				<form>
+					<input id="searchInput" name="index_none_header_sysc" type="text" placeholder="搜索"
+						autocomplete="off">
+					<input id="ai-topsearch" class="submit am-btn" value="搜索" index="1">
+				</form>
+			</div>
+		</div>
+
+		<div class="clear"></div>
+	</div>
+	<div class="banner">
+		<!--轮播 -->
+		<div class="am-slider am-slider-default scoll" data-am-flexslider id="demo-slider-0">
+			<ul class="am-slides">
+				<li class="banner1"><a href="introduction.html"><img src="../images/img1.jpg" /></a></li>
+				<li class="banner2"><a><img src="../images/img2.jpg" /></a></li>
+				<li class="banner3"><a><img src="../images/img3.jpg" /></a></li>
+				<li class="banner4"><a><img src="../images/img4.jpg" /></a></li>
+
+			</ul>
+		</div>
+		<div class="clear"></div>
+	</div>
+	<div class="shopNav">
+		<div class="slideall">
+
+			<div class="long-title"><span class="all-goods">全部分类</span></div>
+
+
+			<!--侧边导航 -->
+			<div id="nav" class="navfull">
+				<div class="area clearfix">
+					<div class="category-content" id="guide_2">
+						<div class="category">
+							<ul class="category-list" id="js_climit_li"></ul>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+
+			<!--轮播-->
+
+			<script type="text/javascript">
+				(function () {
+					$('.am-slider').flexslider({
+						animation: "fade",
+						slideshowSpeed: 1000,
+					});
+				});
+
+			</script>
+			<div class="clear"></div>
+		</div>
+		<script type="text/javascript">
+			if ($(window).width() < 640) {
+				function autoScroll(obj) {
+					$(obj).find("ul").animate({
+						marginTop: "-39px"
+					}, 500, function () {
+						$(this).css({
+							marginTop: "0px"
+						}).find("li:first").appendTo(this);
+					})
+				}
+				$(function () {
+					setInterval('autoScroll(".demo")', 3000);
+				})
+			}
+		</script>
+	</div>
+	<div class="shopMainbg">
+		<div class="shopMain" id="shopmain">
+			<div class="clear "></div>
+
+			<div id="f1">
+				<!--宠物狗用品-->
+				<div class="am-container ">
+					<div class="shopTitle ">
+						<h4>宠物狗用品</h4>
+						<div class="today-brands">
+						</div>
+						<span class="more ">
+							<a href="search.html">更多分类<i class="am-icon-angle-right" style="padding-left:10px ;"></i></a>
+						</span>
+					</div>
+				</div>
+
+				<div class="am-g am-g-fixed floodFour">
+					<div class="am-u-sm-5 am-u-md-4 text-one list ">
+						<div class="word">
+							<a class="outer" href="search.html?class=狗粮"><span class="inner"><b class="text">狗粮</b></span></a>
+							<a class="outer" href="search.html?class=零食"><span class="inner"><b class="text">零食</b></span></a>
+							<a class="outer" href="search.html?class=清洁"><span class="inner"><b class="text">清洁</b></span></a>
+							<a class="outer" href="search.html?class=狗窝"><span class="inner"><b class="text">狗窝</b></span></a>
+							<a class="outer" href="search.html?class=牵绳"><span class="inner"><b class="text">牵绳</b></span></a>
+							<a class="outer" href="search.html?class=玩具"><span class="inner"><b class="text">玩具</b></span></a>
+						</div>
+
+
+						<div><img src="../images/right2.jpg" alt=""></div>
+						<div class="triangle-topright"></div>
+					</div>
+
+					<div class="am-u-sm-7 am-u-md-4 text-two sug">
+						<div class="outer-con ">
+							<div class="title ">
+								truelove狗狗牵引绳
+							</div>
+							<div class="sub-title ">
+								¥13.8
+							</div>
+							<i class="am-icon-shopping-basket am-icon-md  seprate"></i>
+						</div>
+						<a href="introduction.html?detail=1"><img src="../imgs/doggood1.jpg" /></a>
+					</div>
+
+					<div class="am-u-sm-7 am-u-md-4 text-two">
+						<div class="outer-con ">
+							<div class="title ">
+								ACANA爱肯拿经典犬粮
+							</div>
+							<div class="sub-title ">
+								¥13.8
+							</div>
+							<i class="am-icon-shopping-basket am-icon-md  seprate"></i>
+						</div>
+						<a href="introduction.html?detail=2"><img src="../imgs/doggood2.jpg" /></a>
+					</div>
+
+
+					<div class="am-u-sm-3 am-u-md-2 text-three big">
+						<div class="outer-con ">
+							<div class="title ">
+								狗粮通用型40斤装冻干金毛泰迪萨摩耶拉布拉多阿拉斯加大型成幼犬
+							</div>
+							<div class="sub-title ">
+								¥4.8
+							</div>
+							<i class="am-icon-shopping-basket am-icon-md  seprate"></i>
+						</div>
+						<a href="introduction.html?detail=3"><img src="../imgs/doggood3.jpg" /></a>
+					</div>
+
+					<div class="am-u-sm-3 am-u-md-2 text-three sug">
+						<div class="outer-con ">
+							<div class="title ">
+								狗狗玩具训练按铃
+							</div>
+							<div class="sub-title ">
+								¥4.8
+							</div>
+							<i class="am-icon-shopping-basket am-icon-md  seprate"></i>
+						</div>
+						<a href="introduction.html?detail=4"><img src="../imgs/doggood6.jpg" /></a>
+					</div>
+
+					<div class="am-u-sm-3 am-u-md-2 text-three ">
+						<div class="outer-con ">
+							<div class="title ">
+								汪爸爸狗狗幼犬羊奶粉300g
+							</div>
+							<div class="sub-title ">
+								¥4.8
+							</div>
+							<i class="am-icon-shopping-basket am-icon-md  seprate"></i>
+						</div>
+						<a href="introduction.html?detail=4"><img src="../imgs/doggood5.jpg" /></a>
+					</div>
+
+					<div class="am-u-sm-3 am-u-md-2 text-three last big ">
+						<div class="outer-con ">
+							<div class="title ">
+								狗碗狗盆猫碗双碗自动饮水防打翻食盆宠物碗可爱猫咪饭盆狗狗用品
+							</div>
+							<div class="sub-title ">
+								¥4.8
+							</div>
+							<i class="am-icon-shopping-basket am-icon-md  seprate"></i>
+						</div>
+						<a href="introduction.html?detail=4"><img src="../imgs/doggood4.jpg" /></a>
+					</div>
+
+				</div>
+				<div class="clear "></div>
+			</div>
+
+
+			<div id="f2">
+				<!--宠物猫用品-->
+				<div class="am-container ">
+					<div class="shopTitle ">
+						<h4>宠物猫用品</h4>
+						<div class="today-brands "></div>
+						<span class="more ">
+							<a href="search.html">更多分类<i class="am-icon-angle-right" style="padding-left:10px ;"></i></a>
+						</span>
+					</div>
+				</div>
+				<div class="am-g am-g-fixed floodThree ">
+					<div class="am-u-sm-4 text-four list">
+						<div class="word">
+							<a class="outer" href="search.html?class=猫粮"><span class="inner"><b class="text">猫粮</b></span></a>
+							<a class="outer" href="search.html?class=玩具"><span class="inner"><b class="text">玩具</b></span></a>
+							<a class="outer" href="search.html?class=零食"><span class="inner"><b class="text">零食</b></span></a>
+							<a class="outer" href="search.html?class=清洁"><span class="inner"><b class="text">清洁</b></span></a>
+							<a class="outer" href="search.html?class=猫窝"><span class="inner"><b class="text">猫窝</b></span></a>
+							<a class="outer" href="search.html?class=装扮"><span class="inner"><b class="text">装扮</b></span></a>
+						</div>
+						<div><img src="../images/right1.jpg" alt=""></div>
+						<div class="triangle-topright"></div>
+
+					</div>
+					<div class="am-u-sm-4 text-four">
+						<a href="introduction.html?detail=4">
+							<img src="../imgs/catgood1.jpg" />
+							<div class="outer-con ">
+								<div class="title ">
+									猫窝四季通用猫咪封闭式房子
+								</div>
+								<div class="sub-title ">
+									¥60
+								</div>
+								<i class="am-icon-shopping-basket am-icon-md  seprate"></i>
+							</div>
+						</a>
+					</div>
+					<div class="am-u-sm-4 text-four sug">
+						<a href="introduction.html?detail=4">
+							<img src="../imgs/catgood2.jpg" />
+							<div class="outer-con ">
+								<div class="title ">
+									猫咪伊莉莎白圈防舔头套
+								</div>
+								<div class="sub-title ">
+									¥12
+								</div>
+								<i class="am-icon-shopping-basket am-icon-md  seprate"></i>
+							</div>
+						</a>
+					</div>
+
+					<div class="am-u-sm-6 am-u-md-3 text-five big ">
+						<a href="introduction.html?detail=4">
+							<img src="../imgs/catgood3.jpg" />
+							<div class="outer-con ">
+								<div class="title ">
+									猫咪衣服小奶猫猫背心
+								</div>
+								<div class="sub-title ">
+									¥17
+								</div>
+								<i class="am-icon-shopping-basket am-icon-md  seprate"></i>
+							</div>
+						</a>
+					</div>
+					<div class="am-u-sm-6 am-u-md-3 text-five ">
+						<a href="introduction.html?detail=4">
+							<img src="../imgs/catgood4.jpg" />
+							<div class="outer-con ">
+								<div class="title ">
+									太空喵宠物包舱猫咪外出笼子
+								</div>
+								<div class="sub-title ">
+									¥152
+								</div>
+								<i class="am-icon-shopping-basket am-icon-md  seprate"></i>
+							</div>
+						</a>
+					</div>
+					<div class="am-u-sm-6 am-u-md-3 text-five sug">
+						<a href="introduction.html?detail=4">
+							<img src="../imgs/catgood5.jpg" />
+							<div class="outer-con ">
+								<div class="title ">
+									2g*18条猫条零食猫咪肉泥
+								</div>
+								<div class="sub-title ">
+									¥13.8
+								</div>
+								<i class="am-icon-shopping-basket am-icon-md  seprate"></i>
+							</div>
+						</a>
+					</div>
+					<div class="am-u-sm-6 am-u-md-3 text-five big">
+						<a href="introduction.html?detail=4">
+							<img src="../imgs/catgood6.jpg" />
+							<div class="outer-con ">
+								<div class="title ">
+									米亚舟猫吊床吸盘式挂床猫窝
+								</div>
+								<div class="sub-title ">
+									¥18
+								</div>
+								<i class="am-icon-shopping-basket am-icon-md  seprate"></i>
+							</div>
+						</a>
+					</div>
+
+				</div>
+
+				<div class="clear "></div>
+			</div>
+
+
+			<div id="f3">
+				<!--水族箱用品-->
+				<div class="am-container ">
+					<div class="shopTitle ">
+						<h4>水族箱用品</h4>
+						<div class="today-brands "></div>
+						<span class="more ">
+							<a href="search.html">更多分类<i class="am-icon-angle-right" style="padding-left:10px ;"></i></a>
+						</span>
+					</div>
+				</div>
+
+				<div class="am-g am-g-fixed floodFour">
+					<div class="am-u-sm-5 am-u-md-4 text-one list ">
+						<div class="word">
+							<a class="outer" href="search.html?class=清洁"><span class="inner"><b class="text">清洁</b></span></a>
+							<a class="outer" href="search.html?class=除藻"><span class="inner"><b class="text">除藻</b></span></a>
+							<a class="outer" href="search.html?class=造景"><span class="inner"><b class="text">造景</b></span></a>
+							<a class="outer" href="search.html?class=珊石"><span class="inner"><b class="text">珊石</b></span></a>
+							<a class="outer" href="search.html?class=过滤"><span class="inner"><b class="text">过滤</b></span></a>
+							<a class="outer" href="search.html?class=水质"><span class="inner"><b class="text">水质</b></span></a>
+						</div>
+						<img src="../images/right3.jpg " />
+						</a>
+						<div class="triangle-topright"></div>
+					</div>
+
+					<div class="am-u-sm-7 am-u-md-4 text-two sug">
+						<div class="outer-con ">
+							<div class="title ">
+								鱼缸换水器自动吸
+							</div>
+							<div class="sub-title ">
+								¥18
+							</div>
+							<i class="am-icon-shopping-basket am-icon-md  seprate"></i>
+						</div>
+						<a href="introduction.html?detail=4"><img src="../imgs/watergood1.jpg" /></a>
+					</div>
+
+					<div class="am-u-sm-7 am-u-md-4 text-two">
+						<div class="outer-con ">
+							<div class="title ">
+								鱼缸水温温度计
+							</div>
+							<div class="sub-title ">
+								¥15
+							</div>
+							<i class="am-icon-shopping-basket am-icon-md  seprate"></i>
+						</div>
+						<a href="introduction.html?detail=4"><img src="../imgs/watergood2.jpg" /></a>
+					</div>
+
+
+					<div class="am-u-sm-3 am-u-md-2 text-three big">
+						<div class="outer-con ">
+							<div class="title ">
+								yee鱼缸潜水泵抽水泵底吸泵小型静音
+							</div>
+							<div class="sub-title ">
+								¥44
+							</div>
+							<i class="am-icon-shopping-basket am-icon-md  seprate"></i>
+						</div>
+						<a href="introduction.html?detail=4"><img src="../imgs/watergood3.jpg" /></a>
+					</div>
+
+					<div class="am-u-sm-3 am-u-md-2 text-three sug">
+						<div class="outer-con ">
+							<div class="title ">
+								鱼缸过滤材料硝化细菌屋
+							</div>
+							<div class="sub-title ">
+								¥23
+							</div>
+							<i class="am-icon-shopping-basket am-icon-md  seprate"></i>
+						</div>
+						<a href="introduction.html?detail=4"><img src="../imgs/watergood4.jpg" /></a>
+					</div>
+
+					<div class="am-u-sm-3 am-u-md-2 text-three ">
+						<div class="outer-con ">
+							<div class="title ">
+								仿真珊瑚鱼缸造景礁石假山
+							</div>
+							<div class="sub-title ">
+								¥34
+							</div>
+							<i class="am-icon-shopping-basket am-icon-md  seprate"></i>
+						</div>
+						<a href="introduction.html?detail=4"><img src="../imgs/watergood5.jpg" /></a>
+					</div>
+
+					<div class="am-u-sm-3 am-u-md-2 text-three last big ">
+						<div class="outer-con ">
+							<div class="title ">
+
+								菠萝屋鱼缸造景装饰海绵宝宝公仔水族箱卡通树脂小摆件鱼虾躲避屋
+							</div>
+							<div class="sub-title ">
+								¥9
+							</div>
+							<i class="am-icon-shopping-basket am-icon-md  seprate"></i>
+						</div>
+						<a href="introduction.html?detail=4"><img src="../imgs/watergood6.jpg" /></a>
+					</div>
+
+				</div>
+				<div class="clear "></div>
+			</div>
+
+
+			<div id="f4">
+				<!--宠物鼠用品-->
+				<div class="am-container ">
+					<div class="shopTitle ">
+						<h4>宠物鼠用品</h4>
+						<div class="today-brands "></div>
+						<span class="more ">
+							<a href="search.html">更多分类<i class="am-icon-angle-right" style="padding-left:10px ;"></i></a>
+						</span>
+					</div>
+				</div>
+				<div class="am-g am-g-fixed floodThree ">
+					<div class="am-u-sm-4 text-four list">
+						<div class="word">
+							<a class="outer" href="search.html?class=磨牙棒"><span class="inner"><b class="text">磨牙棒</b></span></a>
+							<a class="outer" href="search.html?class=垫料"><span class="inner"><b class="text">垫料</b></span></a>
+							<a class="outer" href="search.html?class=粮食"><span class="inner"><b class="text">粮食</b></span></a>
+							<a class="outer" href="search.html?class=锻炼"><span class="inner"><b class="text">锻炼</b></span></a>
+							<a class="outer" href="search.html?class=牧草"><span class="inner"><b class="text">牧草</b></span></a>
+							<a class="outer" href="search.html?class=化毛"><span class="inner"><b class="text">化毛</b></span></a>
+						</div>
+						<a href="introduction.html?detail=4">
+							<img src="../images/right1.jpg " />
+
+						</a>
+						<div class="triangle-topright"></div>
+					</div>
+					<div class="am-u-sm-4 text-four">
+						<a href="#">
+							<img src="../imgs/mousegood1.jpg" />
+							<div class="outer-con ">
+								<div class="title ">
+									小仓鼠粮食金丝熊主粮
+								</div>
+								<div class="sub-title ">
+									¥24
+								</div>
+								<i class="am-icon-shopping-basket am-icon-md  seprate"></i>
+							</div>
+						</a>
+					</div>
+					<div class="am-u-sm-4 text-four sug">
+						<a href="introduction.html?detail=4">
+							<img src="../imgs/mousegood2.jpg" />
+							<div class="outer-con ">
+								<div class="title ">
+									仓鼠笼子金丝熊超大别墅
+								</div>
+								<div class="sub-title ">
+									¥28
+								</div>
+								<i class="am-icon-shopping-basket am-icon-md  seprate"></i>
+							</div>
+						</a>
+					</div>
+
+					<div class="am-u-sm-6 am-u-md-3 text-five big ">
+						<a href="introduction.html?detail=4">
+							<img src="../imgs/mousegood3.jpg" />
+							<div class="outer-con ">
+								<div class="title ">
+									仓鼠玉米芯垫料夏季消暑去味木屑尿沙用品金丝熊兔子刺猬龙猫宠物
+								</div>
+								<div class="sub-title ">
+									¥34
+								</div>
+								<i class="am-icon-shopping-basket am-icon-md  seprate"></i>
+							</div>
+						</a>
+					</div>
+					<div class="am-u-sm-6 am-u-md-3 text-five ">
+						<a href="introduction.html?detail=4">
+							<img src="../imgs/mousegood4.jpg" />
+							<div class="outer-con ">
+								<div class="title ">
+									仓鼠零食饼干磨牙棒用品
+								</div>
+								<div class="sub-title ">
+									¥20
+								</div>
+								<i class="am-icon-shopping-basket am-icon-md  seprate"></i>
+							</div>
+						</a>
+					</div>
+					<div class="am-u-sm-6 am-u-md-3 text-five sug">
+						<a href="introduction.html?detail=4">
+							<img src="../imgs/mousegood5.jpg" />
+							<div class="outer-con ">
+								<div class="title ">
+									仓鼠跑轮玩具滚轮静音支架
+								</div>
+								<div class="sub-title ">
+									¥18
+								</div>
+								<i class="am-icon-shopping-basket am-icon-md  seprate"></i>
+							</div>
+						</a>
+					</div>
+					<div class="am-u-sm-6 am-u-md-3 text-five big">
+						<a href="introduction.html?detail=4">
+							<img src="../imgs/mousegood6.jpg" />
+							<div class="outer-con ">
+								<div class="title ">
+									仓鼠冻干豆腐小零食金丝熊粮食刺猬磨牙奶酪美毛营养用品400ml
+								</div>
+								<div class="sub-title ">
+									¥18
+								</div>
+								<i class="am-icon-shopping-basket am-icon-md  seprate"></i>
+							</div>
+						</a>
+					</div>
+
+				</div>
+
+				<div class="clear "></div>
+			</div>
+
+
+			<div id="f5">
+				<!--宠物兔用品-->
+				<div class="am-container ">
+					<div class="shopTitle ">
+						<h4>宠物兔用品</h4>
+						<div class="today-brands "></div>
+						<span class="more ">
+							<a href="search.html">更多分类<i class="am-icon-angle-right" style="padding-left:10px ;"></i></a>
+						</span>
+					</div>
+				</div>
+				<div class="am-g am-g-fixed floodFour">
+					<div class="am-u-sm-5 am-u-md-4 text-one list ">
+						<div class="word">
+							<a class="outer" href="search.html?class=磨牙棒"><span class="inner"><b class="text">磨牙棒</b></span></a>
+							<a class="outer" href="search.html?class=垫料"><span class="inner"><b class="text">垫料</b></span></a>
+							<a class="outer" href="search.html?class=粮食"><span class="inner"><b class="text">粮食</b></span></a>
+							<a class="outer" href="search.html?class=锻炼"><span class="inner"><b class="text">锻炼</b></span></a>
+							<a class="outer" href="search.html?class=牧草"><span class="inner"><b class="text">牧草</b></span></a>
+							<a class="outer" href="search.html?class=化毛"><span class="inner"><b class="text">化毛</b></span></a>
+						</div>
+						<a href="introduction.html?detail=4">
+
+							<img src="../images/right1.jpg " />
+						</a>
+						<div class="triangle-topright"></div>
+					</div>
+
+					<div class="am-u-sm-7 am-u-md-4 text-two sug">
+						<div class="outer-con ">
+							<div class="title ">
+								兔子上加水自动饮水器喝水器
+							</div>
+							<div class="sub-title ">
+								¥38
+							</div>
+							<i class="am-icon-shopping-basket am-icon-md  seprate"></i>
+						</div>
+						<a href="introduction.html?detail=4"><img src="../imgs/rabitgood1.jpg" /></a>
+					</div>
+
+					<div class="am-u-sm-7 am-u-md-4 text-two">
+						<div class="outer-con ">
+							<div class="title ">
+								谷物磨牙草圈兔子
+							</div>
+							<div class="sub-title ">
+								¥16
+							</div>
+							<i class="am-icon-shopping-basket am-icon-md  seprate"></i>
+						</div>
+						<a href="introduction.html?detail=4"><img src="../imgs/rabitgood2.jpg" /></a>
+					</div>
+
+
+					<div class="am-u-sm-3 am-u-md-2 text-three big">
+						<div class="outer-con ">
+							<div class="title ">
+								巨猫笼仓鼠金丝熊兔笼子特大号兔子笼刺猬荷兰猪龙猫松鼠兔笼窝
+							</div>
+							<div class="sub-title ">
+								¥44
+							</div>
+							<i class="am-icon-shopping-basket am-icon-md  seprate"></i>
+						</div>
+						<a href="introduction.html?detail=4"><img src="../imgs/rabitgood3.jpg" /></a>
+					</div>
+
+					<div class="am-u-sm-3 am-u-md-2 text-three sug">
+						<div class="outer-con ">
+							<div class="title ">
+								JESSIE提摩西草颗粒
+							</div>
+							<div class="sub-title ">
+								¥13
+							</div>
+							<i class="am-icon-shopping-basket am-icon-md  seprate"></i>
+						</div>
+						<a href="introduction.html?detail=4"><img src="../imgs/rabitgood5.jpg" /></a>
+					</div>
+
+					<div class="am-u-sm-3 am-u-md-2 text-three ">
+						<div class="outer-con ">
+							<div class="title ">
+								兔粮洁西果蔬兔饲料
+							</div>
+							<div class="sub-title ">
+								¥48
+							</div>
+							<i class="am-icon-shopping-basket am-icon-md  seprate"></i>
+						</div>
+						<a href="introduction.html?detail=4"><img src="../imgs/rabitgood4.jpg" /></a>
+					</div>
+
+					<div class="am-u-sm-3 am-u-md-2 text-three last big ">
+						<div class="outer-con ">
+							<div class="title ">
+								JESSIE/洁西兔子尿垫狗狗荷兰猪尿不湿 强吸水小宠尿片
+							</div>
+							<div class="sub-title ">
+								¥61
+							</div>
+							<i class="am-icon-shopping-basket am-icon-md  seprate"></i>
+						</div>
+						<a href="introduction.html?detail=4"><img src="../imgs/rabitgood6.jpg" /></a>
+					</div>
+
+				</div>
+				<div class="clear "></div>
+			</div>
+
+
+			<div id="f6">
+				<!--小爬宠用品-->
+				<div class="am-container ">
+					<div class="shopTitle ">
+						<h4>小爬宠用品</h4>
+						<div class="today-brands "></div>
+						<span class="more ">
+							<a href="search.html">更多分类<i class="am-icon-angle-right" style="padding-left:10px ;"></i></a>
+						</span>
+					</div>
+				</div>
+				<div class="am-g am-g-fixed floodThree ">
+					<div class="am-u-sm-4 text-four list">
+						<div class="word">
+							<a class="outer" href="search.html?class=蜘蛛"><span class="inner"><b class="text">蜘蛛</b></span></a>
+							<a class="outer" href="search.html?class=蜥蜴"><span class="inner"><b class="text">蜥蜴</b></span></a>
+							<a class="outer" href="search.html?class=蚂蚁"><span class="inner"><b class="text">蚂蚁</b></span></a>
+							<a class="outer" href="search.html?class=蟋蟀"><span class="inner"><b class="text">蟋蟀</b></span></a>
+							<a class="outer" href="search.html?class=角蛙"><span class="inner"><b class="text">角蛙</b></span></a>
+							<a class="outer" href="search.html?class=宠物蛇"><span class="inner"><b class="text">宠物蛇</b></span></a>
+						</div>
+						<a href="introduction.html?detail=4">
+							<img src="../images/right1.jpg " />
+
+						</a>
+						<div class="triangle-topright"></div>
+					</div>
+					<div class="am-u-sm-4 text-four">
+						<a href="introduction.html?detail=4">
+							<img src="../imgs/sgood1.jpg" />
+							<div class="outer-con ">
+								<div class="title ">
+									豪华版亚克力蚂蚁城堡超巢穴
+								</div>
+								<div class="sub-title ">
+									¥187
+								</div>
+								<i class="am-icon-shopping-basket am-icon-md  seprate"></i>
+							</div>
+						</a>
+					</div>
+					<div class="am-u-sm-4 text-four sug">
+						<a href="introduction.html?detail=4">
+							<img src="../imgs/sgood2.jpg" />
+							<div class="outer-con ">
+								<div class="title ">
+									蚂蚁宠物混凝土蚂两居室蚁巢
+								</div>
+								<div class="sub-title ">
+									¥303
+								</div>
+								<i class="am-icon-shopping-basket am-icon-md  seprate"></i>
+							</div>
+						</a>
+					</div>
+
+					<div class="am-u-sm-6 am-u-md-3 text-five big ">
+						<a href="introduction.html?detail=4">
+							<img src="../imgs/sgood3.jpg" />
+							<div class="outer-con ">
+								<div class="title ">
+									超大巢穴豪华繁殖版养蚂蚁蚂蚁城堡
+								</div>
+								<div class="sub-title ">
+									¥191
+								</div>
+								<i class="am-icon-shopping-basket am-icon-md  seprate"></i>
+							</div>
+						</a>
+					</div>
+					<div class="am-u-sm-6 am-u-md-3 text-five ">
+						<a href="introduction.html?detail=4">
+							<img src="../imgs/sgood4.jpg" />
+							<div class="outer-con ">
+								<div class="title ">
+									自制蚂蚁食物蛋白质粮食
+								</div>
+								<div class="sub-title ">
+									¥1
+								</div>
+								<i class="am-icon-shopping-basket am-icon-md  seprate"></i>
+							</div>
+						</a>
+					</div>
+					<div class="am-u-sm-6 am-u-md-3 text-five sug">
+						<a href="introduction.html?detail=4">
+							<img src="../imgs/sgood5.jpg" />
+							<div class="outer-con ">
+								<div class="title ">
+									自制蚂蚁食物蛋白质粮食
+								</div>
+								<div class="sub-title ">
+									¥9
+								</div>
+								<i class="am-icon-shopping-basket am-icon-md  seprate"></i>
+							</div>
+						</a>
+					</div>
+					<div class="am-u-sm-6 am-u-md-3 text-five big">
+						<a href="introduction.html?detail=4">
+							<img src="../imgs/sgood6.jpg" />
+							<div class="outer-con ">
+								<div class="title ">
+									爬虫保温箱小爬宠饲养盒PVC角蛙乌龟蝎子蜘蛛守宫加热繁殖宠物柜
+								</div>
+								<div class="sub-title ">
+									¥139
+								</div>
+								<i class="am-icon-shopping-basket am-icon-md  seprate"></i>
+							</div>
+						</a>
+					</div>
+
+				</div>
+
+				<div class="clear "></div>
+			</div>
+
+
+
+			<div class="footer ">
+
+				<div class="footer-bd ">
+
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+	<!--菜单 -->
+	<div class=tip>
+		<div id="sidebar">
+
+			<div class="quick_toggle">
+				<li class="qtitem">
+					<a href="#top" class="return_top"><span class="top"></span></a>
+				</li>
+			</div>
+			<!--回到顶部 -->
+			<div id="quick_links_pop" class="quick_links_pop hide"></div>
+		</div>
+	</div>
+	<script>
+		window.jQuery || document.write('<script src="basic/js/jquery-1.9.min.js"><\/script>');
+	</script>
+	<script type="text/javascript" src="../basic/js/quick_links.js"></script>
+</body>
+
+</html>
